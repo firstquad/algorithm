@@ -1,7 +1,5 @@
 package ru.firstquad.algorithm.sort;
 
-import static java.util.Collections.swap;
-
 /**
  * Created by Dima on 20.06.2015.
  */
@@ -29,6 +27,6 @@ public class InsertionSort implements Sort<Integer> {
 
 
     public Integer[] start() {
-       return sort(input, decs);
+        return sort(input, decs);
     }
 }
