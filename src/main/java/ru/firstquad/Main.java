@@ -38,7 +38,7 @@ public class Main {
 //        System.out.println(stack.pop());
 //        System.out.println(stack.isEmpty());
 
-        LinkedQueue queue = new LinkedQueue();
+        LinkedQueue<String> queue = new LinkedQueue<String>();
         queue.enqueue("1");
         queue.enqueue("2");
         queue.enqueue("3");

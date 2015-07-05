@@ -3,11 +3,11 @@ package ru.firstquad.algorithm.func;
 /**
  * Created by Dima on 05.07.2015.
  */
-public class LinkedQueue {
+public class LinkedQueue<T> {
     private Node first, last;
 
     private class Node {
-        String item;
+        T item;
         Node next;
     }
 
@@ -15,7 +15,7 @@ public class LinkedQueue {
         return first == null;
     }
 
-    public void enqueue(String item) {
+    public void enqueue(T item) {
         Node oldLast = last;
         last = new Node();
         last.item = item;
@@ -26,8 +26,8 @@ public class LinkedQueue {
             oldLast.next = last;
     }
 
-    public String dequeue() {
-        String item = first.item;
+    public T dequeue() {
+        T item = first.item;
         first = first.next;
         if (isEmpty())
             last = null;
