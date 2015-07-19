@@ -9,4 +9,9 @@ public interface Sort<T> extends Algorithm {
 
     T[] sort(T[] input, Boolean desc);
 
+    default void swap(Integer[] input, int i, int j) {
+        int temp = input[i];
+        input[i] = input[j];
+        input[j] = temp;
+    }
 }

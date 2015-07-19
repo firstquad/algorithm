@@ -33,8 +33,19 @@ public class InsertionSort implements Sort<Integer> {
         return input;
     }
 
+    public Integer[] sortSimple(Integer[] input, Boolean decs) {
+        for (int i = 0; i < input.length; i++) {
+            for (int j = i; j > 0; j--) {
+                if (input[j] > input[j - 1]) {
+                    swap(input, j, j - 1);
+                }
+            }
+        }
+        return input;
+    }
+
 
     public Integer[] start() {
-        return sort(input, desc);
+        return sortSimple(input, desc);
     }
 }
