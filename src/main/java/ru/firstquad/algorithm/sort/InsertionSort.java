@@ -5,13 +5,21 @@ package ru.firstquad.algorithm.sort;
  */
 public class InsertionSort implements Sort<Integer> {
     Integer[] input;
-    Boolean decs;
+    Boolean desc;
 
-    public InsertionSort(Integer[] input, Boolean decs) {
+    public InsertionSort(Integer[] input, Boolean desc) {
         this.input = input;
-        this.decs = decs;
+        this.desc = desc;
     }
 
+    /*
+    * N^2
+    * (N-1) + (N-2) .. ~ (N^2)/2
+    * N exchanges
+    * if the array is in ascending order, I.S. makes N-1 compares and 0 exchanges
+    * best case ascending order
+    * worst case deascending orger ~ N^2 compares and N^2 exchanges
+    * */
     public Integer[] sort(Integer[] input, Boolean decs) {
         for (int j = 1; j < input.length; j++) {
             int key = input[j];
@@ -27,6 +35,6 @@ public class InsertionSort implements Sort<Integer> {
 
 
     public Integer[] start() {
-        return sort(input, decs);
+        return sort(input, desc);
     }
 }
