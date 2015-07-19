@@ -5,6 +5,7 @@ import ru.firstquad.algorithm.func.LinkedStack;
 import ru.firstquad.algorithm.func.Recursive;
 import ru.firstquad.algorithm.search.BinarySearch;
 import ru.firstquad.algorithm.sort.InsertionSort;
+import ru.firstquad.algorithm.sort.SelectionSort;
 
 import java.util.*;
 import java.util.List;
@@ -17,8 +18,8 @@ import static ru.firstquad.algorithm.util.AlgorithmPrinter.*;
 public class Main {
 
     public static void main(String[] args) {
-//        Integer[] input = {5, 2, 4, 9, 7, 1, 3, 6};
-        Integer[] input = {1, 5, 5, 7};
+        Integer[] input = {5, 2, 4, 9, 7, 1, 3, 6};
+//        Integer[] input = {1, 5, 5, 7};
 //        print(new InsertionSort(input, true));
 //        print(new InsertionSort(input, false));
 //        print(new BinarySearch(input, 5));
@@ -38,14 +39,16 @@ public class Main {
 //        System.out.println(stack.pop());
 //        System.out.println(stack.isEmpty());
 
-        LinkedQueue<String> queue = new LinkedQueue<String>();
-        queue.enqueue("1");
-        queue.enqueue("2");
-        queue.enqueue("3");
+        print(new SelectionSort(input, false));
 
-        System.out.println(queue.dequeue());
-        System.out.println(queue.dequeue());
-        System.out.println(queue.dequeue());
-        System.out.println(queue.isEmpty());
+//        LinkedQueue<String> queue = new LinkedQueue<String>();
+//        queue.enqueue("1");
+//        queue.enqueue("2");
+//        queue.enqueue("3");
+//
+//        System.out.println(queue.dequeue());
+//        System.out.println(queue.dequeue());
+//        System.out.println(queue.dequeue());
+//        System.out.println(queue.isEmpty());
     }
 }
