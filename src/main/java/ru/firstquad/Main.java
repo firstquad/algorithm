@@ -6,6 +6,7 @@ import ru.firstquad.algorithm.func.Recursive;
 import ru.firstquad.algorithm.search.BinarySearch;
 import ru.firstquad.algorithm.sort.InsertionSort;
 import ru.firstquad.algorithm.sort.SelectionSort;
+import ru.firstquad.algorithm.sort.ShellSort;
 
 import java.util.*;
 import java.util.List;
@@ -20,7 +21,7 @@ public class Main {
     public static void main(String[] args) {
         Integer[] input = {5, 2, 4, 9, 7, 1, 3, 6};
 //        Integer[] input = {1, 5, 5, 7};
-        print(new InsertionSort(input, true));
+//        print(new InsertionSort(input, true));
 //        print(new InsertionSort(input, false));
 //        print(new BinarySearch(input, 5));
 
@@ -40,6 +41,8 @@ public class Main {
 //        System.out.println(stack.isEmpty());
 
 //        print(new SelectionSort(input, false));
+        print(new ShellSort(input, false));
+
 
 //        LinkedQueue<String> queue = new LinkedQueue<String>();
 //        queue.enqueue("1");
