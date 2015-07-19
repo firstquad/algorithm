@@ -7,6 +7,7 @@ import ru.firstquad.algorithm.search.BinarySearch;
 import ru.firstquad.algorithm.sort.InsertionSort;
 import ru.firstquad.algorithm.sort.SelectionSort;
 import ru.firstquad.algorithm.sort.ShellSort;
+import ru.firstquad.algorithm.sort.ShuffleSort;
 
 import java.util.*;
 import java.util.List;
@@ -41,7 +42,8 @@ public class Main {
 //        System.out.println(stack.isEmpty());
 
 //        print(new SelectionSort(input, false));
-        print(new ShellSort(input, false));
+//        print(new ShellSort(input, false));
+        print(new ShuffleSort(input, false));
 
 
 //        LinkedQueue<String> queue = new LinkedQueue<String>();
