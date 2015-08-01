@@ -68,4 +68,29 @@ public class Recursive {
             }
         }
     }
+
+    public void deleteEmptyDirs(File rootDir) {
+        ArrayList<File> emptyDirs = findEmptyDirs(rootDir, new ArrayList<>());
+        while (emptyDirs.size() != 0) {
+            emptyDirs.forEach(File::delete);
+            emptyDirs = findEmptyDirs(rootDir, new ArrayList<>());
+        }
+    }
+
+    public ArrayList<File> findEmptyDirs(File rootDir, ArrayList<File> emptyDirs) {
+        File[] childs = rootDir.listFiles();
+        if (childs == null || childs.length == 0) {
+            if (rootDir.isDirectory())
+                emptyDirs.add(rootDir);
+            return emptyDirs;
+        }
+        for (File child : childs) {
+            if (child.isDirectory() && (child.listFiles() == null || child.listFiles().length == 0)) {
+                emptyDirs.add(child);
+            } else {
+                findEmptyDirs(child, emptyDirs);
+            }
+        }
+        return emptyDirs;
+    }
 }
