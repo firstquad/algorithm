@@ -7,6 +7,9 @@ public class InsertionSort implements Sort<Integer> {
     Integer[] input;
     Boolean desc;
 
+    public InsertionSort() {
+    }
+
     public InsertionSort(Integer[] input, Boolean desc) {
         this.input = input;
         this.desc = desc;
