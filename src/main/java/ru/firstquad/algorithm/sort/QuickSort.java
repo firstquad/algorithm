@@ -15,6 +15,7 @@ public class QuickSort implements Sort<Integer> {
     /*
     * N*lg(N) but faster than mergesort
     * need shuflle before start, otherwise if array is sorted coast = N^2
+    * unstable
     * */
     @Override
     public Integer[] sort(Integer[] input, Boolean desc) {

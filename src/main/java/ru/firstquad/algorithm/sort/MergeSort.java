@@ -18,6 +18,7 @@ public class MergeSort implements Sort<Integer> {
     * c(N) = C(N/2) + C(N/2) + N
     *        first    second   merge
     *        half     half
+    * stable
     * */
     @Override
     public Integer[] sort(Integer[] input, Boolean desc) {

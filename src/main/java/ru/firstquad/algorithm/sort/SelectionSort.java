@@ -15,6 +15,7 @@ public class SelectionSort implements Sort<Integer> {
     /*
     * N^2
     * is independing of order
+    * unstable
     * */
     public Integer[] sort(Integer[] input, Boolean desc) {
         for (int i = 0; i < input.length - 1; i++) {

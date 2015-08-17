@@ -22,6 +22,7 @@ public class InsertionSort implements Sort<Integer> {
     * if the array is in ascending order, I.S. makes N-1 compares and 0 exchanges
     * best case ascending order
     * worst case deascending orger ~ N^2 compares and N^2 exchanges
+    * stable
     * */
     public Integer[] sort(Integer[] input, Boolean decs) {
         for (int j = 1; j < input.length; j++) {

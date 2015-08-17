@@ -14,6 +14,7 @@ public class ShellSort implements Sort<Integer> {
 
     /*
     * N ^ (3/2)
+    * unstable
     * */
     @Override
     public Integer[] sort(Integer[] input, Boolean desc) {
