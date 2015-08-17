@@ -9,6 +9,9 @@ public class ShuffleSort implements Sort<Integer> {
     Integer[] input;
     Boolean decs;
 
+    public ShuffleSort() {
+    }
+
     public ShuffleSort(Integer[] input, Boolean decs) {
         this.input = input;
         this.decs = decs;
