@@ -1,16 +1,11 @@
-package ru.firstquad.algorithm.sort;
+package ru.firstquad.algorithm.sort.impl;
+
+import ru.firstquad.algorithm.sort.Sort;
 
 /**
  * Created by Dima on 19.07.2015.
  */
 public class MergeSort implements Sort<Integer> {
-    Integer[] input;
-    Boolean decs;
-
-    public MergeSort(Integer[] input, Boolean decs) {
-        this.input = input;
-        this.decs = decs;
-    }
 
     /*
     * N*log(N)
@@ -27,25 +22,22 @@ public class MergeSort implements Sort<Integer> {
         return input;
     }
 
-    @Override
-    public Integer[] start() {
-        return sort(input, decs);
-    }
-
     private void sort(Integer[] a, Integer[] aux, int lo, int hi) {
         if (hi <= lo)
             return;
         //optimize for tiny arrays
         int CUTOFF = 7;
-        if (hi <= lo + CUTOFF - 1)
-            new InsertionSort().sort(a, false);
+        if (hi <= lo + CUTOFF - 1) {
+            @SuppressWarnings("unchecked")
+            Comparable[] sort = new InsertionSort().sort(a, false);
+        }
         int mid = lo + (hi - lo) / 2;
         sort(a, aux, lo, mid);
         sort(a, aux, mid + 1, hi);
         merge(a, aux, lo, mid, hi);
     }
 
-    public void merge(Integer[] a, Integer[] aux, int lo, int mid, int hi) {
+    private void merge(Integer[] a, Integer[] aux, int lo, int mid, int hi) {
         assert isSorted(a, lo, mid);
         assert isSorted(a, mid + 1, hi);
         //copy

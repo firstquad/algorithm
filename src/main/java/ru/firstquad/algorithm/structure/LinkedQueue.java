@@ -1,4 +1,4 @@
-package ru.firstquad.algorithm.func;
+package ru.firstquad.algorithm.structure;
 
 /**
  * Created by Dima on 05.07.2015.

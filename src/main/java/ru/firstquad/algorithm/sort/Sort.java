@@ -1,16 +1,18 @@
 package ru.firstquad.algorithm.sort;
 
-import ru.firstquad.algorithm.Algorithm;
-
 /**
- * Created by Dima on 20.06.2015.
+ * Created by dmitriy on 17/09/16.
  */
-public interface Sort<T> extends Algorithm {
+public interface Sort<T extends Comparable> {
 
     T[] sort(T[] input, Boolean desc);
 
-    default void swap(Integer[] input, int i, int j) {
-        int temp = input[i];
+    default T[] sort(T[] input) {
+        return sort(input, false);
+    }
+
+    default void swap(T[] input, int i, int j) {
+        T temp = input[i];
         input[i] = input[j];
         input[j] = temp;
     }

@@ -1,12 +1,10 @@
 package ru.firstquad.algorithm.search;
 
-import ru.firstquad.algorithm.Algorithm;
-
 /**
  * Created by Dima on 20.06.2015.
  */
-public interface Search<T> extends Algorithm {
+public interface Search<T extends Comparable> {
 
-    T search(T[] input, T value);
+    Integer search(T[] input, T value);
 
 }

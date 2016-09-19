@@ -1,16 +1,11 @@
-package ru.firstquad.algorithm.sort;
+package ru.firstquad.algorithm.sort.impl;
+
+import ru.firstquad.algorithm.sort.Sort;
 
 /**
  * Created by Dima on 19.07.2015.
  */
 public class ShellSort implements Sort<Integer> {
-    Integer[] input;
-    Boolean decs;
-
-    public ShellSort(Integer[] input, Boolean decs) {
-        this.input = input;
-        this.decs = decs;
-    }
 
     /*
     * N ^ (3/2)
@@ -34,8 +29,4 @@ public class ShellSort implements Sort<Integer> {
         return input;
     }
 
-    @Override
-    public Integer[] start() {
-        return sort(input, decs);
-    }
 }

@@ -1,16 +1,11 @@
-package ru.firstquad.algorithm.sort;
+package ru.firstquad.algorithm.sort.impl;
+
+import ru.firstquad.algorithm.sort.Sort;
 
 /**
  * Created by Dima on 17.08.2015.
  */
 public class QuickSort implements Sort<Integer> {
-    Integer[] input;
-    Boolean decs;
-
-    public QuickSort(Integer[] input, Boolean decs) {
-        this.input = input;
-        this.decs = decs;
-    }
 
     /*
     * N*lg(N) but faster than mergesort
@@ -22,11 +17,6 @@ public class QuickSort implements Sort<Integer> {
         new ShuffleSort().sort(input, true);
         sort(input, 0, input.length - 1);
         return input;
-    }
-
-    @Override
-    public Integer[] start() {
-        return sort(input, decs);
     }
 
     private void sort(Integer[] a, int lo, int hi) {
