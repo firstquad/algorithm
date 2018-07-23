@@ -1,9 +1,9 @@
 package ru.firstquad.algorithm.structure;
 
 /**
- * Created by Dima on 05.07.2015.
+ * Created by Dima on 22.06.2015.
  */
-public class LinkedQueue {
+public class LinkedList {
     private Node first, last;
 
     private class Node {

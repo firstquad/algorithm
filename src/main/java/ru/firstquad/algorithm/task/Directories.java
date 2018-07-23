@@ -7,8 +7,7 @@ import java.util.List;
 /**
  * Created by Dima on 21.06.2015.
  */
-public class FindEmtyDirs {
-
+public class Directories {
 
     public static List<String> getDirs(String path, List<String> dirs) {
         File file = new File(path);
@@ -19,25 +18,6 @@ public class FindEmtyDirs {
                 getDirs(parent[0], dirs);
         }
         return dirs;
-    }
-
-    private static List<String> getOnlyDirs(File file) {
-        if (file == null)
-            return null;
-        List<String> dirs = new ArrayList<String>();
-        for (File file1 : file.listFiles()) {
-            if (file1.isDirectory())
-                dirs.add(file1.getName());
-        }
-        return dirs;
-    }
-
-    public void deleteEmptyDirs(File rootDir) {
-        ArrayList<File> emptyDirs = findEmptyDirs(rootDir, new ArrayList<>());
-        while (emptyDirs.size() != 0) {
-            emptyDirs.forEach(File::delete);
-            emptyDirs = findEmptyDirs(rootDir, new ArrayList<>());
-        }
     }
 
     public ArrayList<File> findEmptyDirs(File rootDir, ArrayList<File> emptyDirs) {
@@ -55,5 +35,16 @@ public class FindEmtyDirs {
             }
         }
         return emptyDirs;
+    }
+
+    private static List<String> getOnlyDirs(File file) {
+        if (file == null)
+            return null;
+        List<String> dirs = new ArrayList<String>();
+        for (File file1 : file.listFiles()) {
+            if (file1.isDirectory())
+                dirs.add(file1.getName());
+        }
+        return dirs;
     }
 }

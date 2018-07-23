@@ -1,25 +1,20 @@
-package ru.firstquad.algorithm.sort.impl;
+package ru.firstquad.algorithm.sort;
 
-import ru.firstquad.algorithm.sort.Sort;
+import static ru.firstquad.algorithm.util.AlgorithmUtils.shuffle;
+import static ru.firstquad.algorithm.util.AlgorithmUtils.swap;
 
 /**
  * Created by Dima on 17.08.2015.
  */
-public class QuickSort implements Sort<Integer> {
+public class QuickSort {
 
-    /*
-    * N*lg(N) but faster than mergesort
-    * need shuflle before start, otherwise if array is sorted coast = N^2
-    * unstable
-    * */
-    @Override
-    public Integer[] sort(Integer[] input, Boolean desc) {
-        new ShuffleSort().sort(input, true);
+    public static int[] sort(int[] input) {
+        shuffle(input, true);
         sort(input, 0, input.length - 1);
         return input;
     }
 
-    private void sort(Integer[] a, int lo, int hi) {
+    private static void sort(int[] a, int lo, int hi) {
         if (hi <= lo)
             return;
         int j = partition(a, lo, hi);
@@ -27,7 +22,7 @@ public class QuickSort implements Sort<Integer> {
         sort(a, j + 1, hi);
     }
 
-    private int partition(Integer[] a, int lo, int hi) {
+    private static int partition(int[] a, int lo, int hi) {
         int i = lo;
         int j = hi + 1;
         while (true) {

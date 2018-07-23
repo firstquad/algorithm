@@ -4,22 +4,22 @@ package ru.firstquad.algorithm.structure;
  * Created by Dima on 22.06.2015.
  */
 public class LinkedStack {
-    Node node;
+    private Node node;
 
     private class Node {
-        String item;
+        int item;
         Node next;
     }
 
-    public void push(String item) {
+    public void push(int item) {
         Node newNode = new Node();
         newNode.item = item;
         newNode.next = this.node;
         this.node = newNode;
     }
 
-    public String pop() {
-        String item = node.item;
+    public int pop() {
+        int item = node.item;
         this.node = node.next;
         return item;
     }
