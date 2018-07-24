@@ -22,6 +22,8 @@ public class SimpleTasks {
 
     public static int greatestDivisor(int a, int b) {
         int min = a > b ? b : a;
+        if (min == 0)
+            return min;
         while (a % min != 0 || b % min != 0) {
             min--;
         }
@@ -30,6 +32,10 @@ public class SimpleTasks {
 
     public static List<Integer> simpleNumbers(int n) {
         List<Integer> r = new ArrayList<>();
+        if (n == 1) {
+            r.add(n);
+            return r;
+        }
         while (n > 2) {
             int divisor = n - 1;
             int count = 0;
