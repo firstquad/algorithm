@@ -65,4 +65,22 @@ public class SimpleSort {
         }
         return input;
     }
+
+    public static int[] countingSort(int[] in) {
+        int[] tmp = new int[in.length];
+
+        for (int n : in) {
+            ++tmp[n];
+        }
+
+        int b = 0;
+        for (int i = 0; i < in.length; i++) {
+            for (int j = 0; j < tmp[i]; j++) {
+                in[b] = i;
+                b++;
+            }
+        }
+
+        return in;
+    }
 }

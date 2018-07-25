@@ -32,6 +32,11 @@ public class SortTest {
     }
 
     @Test
+    public void testCountingSort() {
+        assertArrayEquals(expected, SimpleSort.countingSort(input));
+    }
+
+    @Test
     public void testMergeSort() {
         assertArrayEquals(expected, MergeSort.sort(input));
     }
