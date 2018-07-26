@@ -1,8 +1,6 @@
 package ru.firstquad.algorithm.task;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
 public class SimpleTasks {
 
@@ -98,5 +96,22 @@ public class SimpleTasks {
             sb.append(tmp);
         }
         return sb.toString();
+    }
+
+    public static Map<String, List<String>> countAnagramm(List<String> in) {
+        Map<String, List<String>> out = new HashMap<>();
+        for (String s : in) {
+            char[] chars = s.toCharArray();
+            Arrays.sort(chars);
+            String key = new String(chars);
+            if (out.containsKey(key)) {
+                out.get(key).add(s);
+            } else {
+                List<String> strings = new ArrayList<>();
+                strings.add(s);
+                out.put(key, strings);
+            }
+        }
+        return out;
     }
 }

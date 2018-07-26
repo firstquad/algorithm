@@ -4,6 +4,7 @@ import org.junit.Test;
 import ru.firstquad.algorithm.task.SimpleTasks;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 import static java.util.Arrays.asList;
 import static java.util.Collections.singletonList;
@@ -56,5 +57,10 @@ public class SimpleTasksTest {
         assertEquals("a3b2cdf4", SimpleTasks.compressString("aaabbcdffff"));
         assertEquals("a3", SimpleTasks.compressString("aaa"));
         assertEquals("", SimpleTasks.compressString(""));
+    }
+
+    @Test
+    public void testCountAnagramm() {
+        System.out.println(SimpleTasks.countAnagramm(Arrays.asList("abc", "bca", "cba", "cdf", "dfc", "def")));
     }
 }
