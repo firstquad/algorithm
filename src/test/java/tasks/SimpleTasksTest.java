@@ -46,8 +46,15 @@ public class SimpleTasksTest {
     }
 
     @Test
-    public void test() {
+    public void testPoli() {
         assertFalse(SimpleTasks.poli("teststest"));
         assertTrue(SimpleTasks.poli("teststset"));
+    }
+
+    @Test
+    public void testCompressString() {
+        assertEquals("a3b2cdf4", SimpleTasks.compressString("aaabbcdffff"));
+        assertEquals("a3", SimpleTasks.compressString("aaa"));
+        assertEquals("", SimpleTasks.compressString(""));
     }
 }

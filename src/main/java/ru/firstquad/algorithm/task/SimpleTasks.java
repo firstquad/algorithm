@@ -75,4 +75,28 @@ public class SimpleTasks {
             return r;
         return fact(n - 1, r * n);
     }
+
+    public static String compressString(String s) {
+        if (s.isEmpty())
+            return s;
+        StringBuilder sb = new StringBuilder();
+        char[] chars = s.toCharArray();
+        int tmp = 1;
+        for (int i = 0; i < chars.length - 1; i++) {
+            if (chars[i] == chars[i + 1]) {
+                tmp++;
+            } else {
+                sb.append(chars[i]);
+                if (tmp > 1) {
+                    sb.append(tmp);
+                }
+                tmp = 1;
+            }
+        }
+        sb.append(chars[chars.length - 1]);
+        if (tmp > 1) {
+            sb.append(tmp);
+        }
+        return sb.toString();
+    }
 }
