@@ -138,4 +138,16 @@ public class SimpleTasks {
         }
         return out;
     }
+
+    /**
+     * {2, 4, 5, 2, 6, 7, 3, 2, 4, 5, 2, 6, 7, 3} -> {7, 7, 6, 6, 5}
+     */
+    public static List<Integer> cacheSorted(List<Integer> cache, int i) {
+        cache.add(i);
+        cache.sort(Comparator.reverseOrder());
+        while (cache.size() > 5) {
+            cache.remove(cache.size() - 1);
+        }
+        return cache;
+    }
 }

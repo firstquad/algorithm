@@ -5,6 +5,7 @@ import ru.firstquad.algorithm.task.SimpleTasks;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 import static java.util.Arrays.asList;
 import static java.util.Collections.singletonList;
@@ -62,5 +63,13 @@ public class SimpleTasksTest {
     @Test
     public void testCountAnagramm() {
         System.out.println(SimpleTasks.countAnagramm(Arrays.asList("abc", "bca", "cba", "cdf", "dfc", "def")));
+    }
+
+    @Test
+    public void testCacheSorted() {
+        List<Integer> cache = new ArrayList<>();
+        Arrays.asList(2, 4, 5, 2, 6, 7, 3, 2, 4, 5, 2, 6, 7, 3)
+                .forEach(i -> SimpleTasks.cacheSorted(cache, i));
+        assertEquals(Arrays.asList(7, 7, 6, 6, 5), cache);
     }
 }
