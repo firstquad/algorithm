@@ -14,13 +14,13 @@ public class LinkedStack {
     public void push(int item) {
         Node newNode = new Node();
         newNode.item = item;
-        newNode.next = this.node;
-        this.node = newNode;
+        newNode.next = node;
+        node = newNode;
     }
 
     public int pop() {
         int item = node.item;
-        this.node = node.next;
+        node = node.next;
         return item;
     }
 

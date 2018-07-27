@@ -1,8 +1,6 @@
+package ru.firstquad.algorithm.sort;
+
 import org.junit.Test;
-import ru.firstquad.algorithm.sort.MergeSort;
-import ru.firstquad.algorithm.sort.QuickSort;
-import ru.firstquad.algorithm.sort.RadixSort;
-import ru.firstquad.algorithm.sort.SimpleSort;
 
 import static org.junit.Assert.assertArrayEquals;
 

@@ -1,7 +1,6 @@
-package tasks;
+package ru.firstquad.algorithm.task;
 
 import org.junit.Test;
-import ru.firstquad.algorithm.task.SimpleTasks;
 
 import java.util.ArrayList;
 import java.util.Arrays;

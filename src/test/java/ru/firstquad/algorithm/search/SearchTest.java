@@ -1,5 +1,6 @@
+package ru.firstquad.algorithm.search;
+
 import org.junit.Test;
-import ru.firstquad.algorithm.search.BinarySearch;
 
 import static org.junit.Assert.assertTrue;
 

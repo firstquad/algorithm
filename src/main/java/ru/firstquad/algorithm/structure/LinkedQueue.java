@@ -4,7 +4,7 @@ package ru.firstquad.algorithm.structure;
  * Created by Dima on 05.07.2015.
  */
 public class LinkedQueue {
-    private Node first, last;
+    private Node head, tail;
 
     private class Node {
         int item;
@@ -12,25 +12,25 @@ public class LinkedQueue {
     }
 
     public Boolean isEmpty() {
-        return first == null;
+        return head == null;
     }
 
-    public void enqueue(int item) {
-        Node oldLast = last;
-        last = new Node();
-        last.item = item;
-        last.next = null;
+    public void addFirst(int item) {
+        Node oldLast = tail;
+        tail = new Node();
+        tail.item = item;
+        tail.next = null;
         if (isEmpty())
-            first = last;
+            head = tail;
         else
-            oldLast.next = last;
+            oldLast.next = tail;
     }
 
-    public int dequeue() {
-        int item = first.item;
-        first = first.next;
+    public int getHead() {
+        int item = head.item;
+        head = head.next;
         if (isEmpty())
-            last = null;
+            tail = null;
         return item;
     }
 }

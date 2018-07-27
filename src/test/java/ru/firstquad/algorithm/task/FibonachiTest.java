@@ -1,7 +1,6 @@
-package tasks;
+package ru.firstquad.algorithm.task;
 
 import org.junit.Test;
-import ru.firstquad.algorithm.task.Fibonachi;
 
 import static org.junit.Assert.assertEquals;
 

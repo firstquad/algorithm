@@ -1,8 +1,7 @@
-package tasks;
+package ru.firstquad.algorithm.task;
 
 import org.junit.Assert;
 import org.junit.Test;
-import ru.firstquad.algorithm.task.SymmetryLine;
 
 import static org.junit.Assert.assertTrue;
 
