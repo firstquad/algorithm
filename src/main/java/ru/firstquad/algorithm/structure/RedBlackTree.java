@@ -59,7 +59,7 @@ public class RedBlackTree {
             h.value = value;
         }
 
-        if (isRed(h.right) && !isRed(h.left)) {
+        if (!isRed(h.left) && isRed(h.right)) {
             h = rotateLeft(h);
         } else if (isRed(h.left) && isRed(h.left.left)) {
             h = rotateRight(h);
