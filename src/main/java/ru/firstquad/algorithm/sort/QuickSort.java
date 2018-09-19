@@ -14,31 +14,29 @@ public class QuickSort {
         return input;
     }
 
-    private static void sort(int[] a, int lo, int hi) {
-        if (hi <= lo)
+    private static void sort(int[] input, int lo, int hi) {
+        if (lo >= hi)
             return;
-        int j = partition(a, lo, hi);
-        sort(a, lo, j - 1);
-        sort(a, j + 1, hi);
+        int pivot = input[(lo + hi) / 2];
+        int index = partition(input, lo, hi, pivot);
+        sort(input, lo, index - 1);
+        sort(input, index, hi);
     }
 
-    private static int partition(int[] a, int lo, int hi) {
-        int i = lo;
-        int j = hi + 1;
-        while (true) {
-            while (a[++i] < a[lo]) {
-                if (i == hi)
-                    break;
+    private static int partition(int[] input, int lo, int hi, int pivot) {
+        while (lo <= hi) {
+            while (input[lo] < pivot) {
+                lo++;
             }
-            while (a[lo] < a[--j]) {
-                if (j == lo)
-                    break;
+            while (input[hi] > pivot) {
+                hi--;
             }
-            if (i >= j)
-                break;
-            swap(a, i, j);
+            if (lo <= hi) {
+                swap(input, lo, hi);
+                lo++;
+                hi--;
+            }
         }
-        swap(a, lo, j);
-        return j;
+        return lo;
     }
 }
