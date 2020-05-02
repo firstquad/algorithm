@@ -92,6 +92,14 @@ public class SimpleTasks {
         return fact(n - 1, r * n);
     }
 
+    public static int factIter(int n) {
+        int fact = 1;
+        for (int i = 1; i <= n; i++) {
+            fact = fact * i;
+        }
+        return fact;
+    }
+
     /**
      * aaabbcdffff -> a3b2cdf4
      */
