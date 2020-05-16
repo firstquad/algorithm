@@ -16,7 +16,7 @@ public class SimpleTasksTest {
     @Test
     public void testFindSum() {
         assertEquals(new ArrayList<>(asList(5, 4, 4, 2, 2, 1)), SimpleTasks.findSum(input, 6));
-        assertEquals(new ArrayList<>(asList(5, 4, 4, 2, 2, 1)), SimpleTasks.findSum(input, 2));
+        assertEquals(new ArrayList<>(), SimpleTasks.findSum(input, 2));
     }
 
     @Test
