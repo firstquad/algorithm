@@ -56,6 +56,7 @@ public class SimpleTasks {
                 r.add(n);
             n--;
         }
+        r.add(1);
         return r;
     }
 
@@ -77,10 +78,30 @@ public class SimpleTasks {
         if (in.length() < 2)
             return true;
         String s = in.substring(0, 1);
-        String e = in.substring(in.length() - 1, in.length());
+        String e = in.substring(in.length() - 1);
         if (!s.equalsIgnoreCase(e))
             return false;
         return poli(in.substring(1, in.length() - 1));
+    }
+
+    /**
+     * abcba -> true
+     */
+    public static boolean poliIter(String in) {
+        if (in.length() < 2)
+            return true;
+        char[] c = in.toCharArray();
+        while (c.length > 1) {
+            char a = c[0];
+            char b = c[c.length - 1];
+            if (a != b) {
+                return false;
+            }
+            char[] tmp = new char[c.length - 2];
+            System.arraycopy(c, 1, tmp, 0, tmp.length);
+            c = tmp;
+        }
+        return true;
     }
 
     /**

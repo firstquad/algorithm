@@ -28,7 +28,7 @@ public class SimpleTasksTest {
 
     @Test
     public void testSimpleNumbers() {
-        assertEquals(new ArrayList<>(asList(19, 17, 13, 11, 7, 5, 3)), SimpleTasks.simpleNumbers(20));
+        assertEquals(new ArrayList<>(asList(19, 17, 13, 11, 7, 5, 3, 1)), SimpleTasks.simpleNumbers(20));
         assertEquals(new ArrayList<>(singletonList(1)), SimpleTasks.simpleNumbers(1));
     }
 
@@ -50,6 +50,12 @@ public class SimpleTasksTest {
     public void testPoli() {
         assertFalse(SimpleTasks.poli("teststest"));
         assertTrue(SimpleTasks.poli("teststset"));
+    }
+
+    @Test
+    public void testPoliIter() {
+        assertFalse(SimpleTasks.poliIter("teststest"));
+        assertTrue(SimpleTasks.poliIter("teststset"));
     }
 
     @Test
