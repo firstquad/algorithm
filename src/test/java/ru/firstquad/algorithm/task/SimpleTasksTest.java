@@ -44,6 +44,10 @@ public class SimpleTasksTest {
     public void testFact() {
         assertEquals(120, SimpleTasks.fact(5, 1));
         assertEquals(2, SimpleTasks.fact(2, 1));
+        assertEquals(120, SimpleTasks.factIter(5));
+        assertEquals(2, SimpleTasks.factIter(2));
+        assertEquals(120, SimpleTasks.factIter2(5));
+        assertEquals(2, SimpleTasks.factIter2(2));
     }
 
     @Test

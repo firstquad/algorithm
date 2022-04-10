@@ -121,6 +121,17 @@ public class SimpleTasks {
         return fact;
     }
 
+    public static int factIter2(int n) {
+        if (n == 2) {
+            return n;
+        }
+        int fact = n;
+        while (n > 1) {
+            fact *= --n;
+        }
+        return fact;
+    }
+
     /**
      * aaabbcdffff -> a3b2cdf4
      */
